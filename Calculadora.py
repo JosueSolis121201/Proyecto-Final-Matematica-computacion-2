@@ -28,7 +28,7 @@ class numero_de_cartas_validas:
 
     def cartas_validas(self):
         self.cartas=input("Escoja un numero valido de cartas: ")
-        if int(self.cartas)%3==0 :
+        if (int(self.cartas)%3==0 and ((int(self.cartas)/6)-(1/2))%2==1) or int(self.cartas)==3 :
             self.agrupacion()
             #print("numero de cartas valido")
         else:
