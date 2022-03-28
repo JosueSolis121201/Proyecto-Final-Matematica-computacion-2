@@ -24,9 +24,11 @@ class numero_de_cartas_validas:
        # print(self.grupo2)
        # print(self.grupo1) 
 
+       #int(self.cartas)%3==0:
+
     def cartas_validas(self):
         self.cartas=input("Escoja un numero valido de cartas: ")
-        if int(self.cartas)%3==0:
+        if int(self.cartas)%3==0 :
             self.agrupacion()
             #print("numero de cartas valido")
         else:
@@ -71,14 +73,14 @@ class determinar_carta:
         print(self.grupo1)
         print(self.grupo2)
         print(self.grupo3)
-        print(self.cartas)
+        #print(self.cartas)
         self.num_lanzamientos()
         self.ejecucion()
         self.restulado()
 
     def restulado(self):
        x=len(self.lista)/2+0.5
-       print(x)
+       #print(x)
        print("Tu carta es el numero: "+str(self.lista[int(x-1)]))
 
 
@@ -96,17 +98,17 @@ class determinar_carta:
         
     
     def lanzamiento(self):
-        print("###############    Lanzamiento   ###################")
+        #print("###############    Lanzamiento   ###################")
         x=input("¿en que grupo esta su carta?")
         if int(x) == 1:
             self.lista=self.grupo2+self.grupo1+self.grupo3
-            print(self.lista)
+           # print(self.lista)
         if int(x) == 2:
             self.lista=self.grupo1+self.grupo2+self.grupo3
-            print(self.lista)
+            #print(self.lista)
         if int(x) == 3:
             self.lista=self.grupo2+self.grupo3+self.grupo1
-            print(self.lista)
+            #print(self.lista)
         self.agrupacion_lista()
     
     def agrupacion_lista(self):
@@ -135,8 +137,11 @@ class determinar_carta:
                 self.grupo1.append(num)
                 #print(self.grupo1)
                 self.grupo2_activado=True
+        print("grupo 1")
         print(self.grupo1)
+        print("grupo 2")
         print(self.grupo2)
+        print("grupo 3")
         print(self.grupo3)
 
 
