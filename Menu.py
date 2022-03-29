@@ -10,6 +10,7 @@ class menu():
         Escoja una opcion:''')
                 if x =="1":
                     a=numero_de_cartas_validas()
+                    a.cartas_validas()
                 elif x =="2":
                     print("saliendo...")
                     break

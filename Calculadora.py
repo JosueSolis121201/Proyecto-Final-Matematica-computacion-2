@@ -1,11 +1,6 @@
 
-
-
-
-
-
-
-
+from tkinter import *
+from tkinter import ttk
 
 class numero_de_cartas_validas:
     def __init__(self):
@@ -19,7 +14,6 @@ class numero_de_cartas_validas:
         
 
 
-        self.cartas_validas()
         #print(self.grupo3)
        # print(self.grupo2)
        # print(self.grupo1) 
@@ -70,32 +64,33 @@ class determinar_carta:
         self.cartas=cartas
         self.repeticion=0
         self.lista=[]
+        self.string=""
+        print("grupo 1")
         print(self.grupo1)
+        print("grupo 2")
         print(self.grupo2)
+        print("grupo 3")
         print(self.grupo3)
         #print(self.cartas)
+
         self.num_lanzamientos()
         self.ejecucion()
         self.restulado()
+
+    
+
+    
+
 
     def restulado(self):
        x=len(self.lista)/2+0.5
        #print(x)
        print("Tu carta es el numero: "+str(self.lista[int(x-1)]))
 
-
-
-
-
-
     def ejecucion(self):
-        for i in range(self.repeticion):
+        for i in range(self.repeticion-1):
             self.lanzamiento()
         self.lanzamiento_final()
-            
-        
-
-        
     
     def lanzamiento(self):
         #print("###############    Lanzamiento   ###################")
@@ -112,7 +107,7 @@ class determinar_carta:
         self.agrupacion_lista()
     
     def agrupacion_lista(self):
-        print("###############  Agrupacion_lista  ###################")
+        print("###############    Lanzamiento   ###################")
         self.grupo1=[]
         self.grupo2=[]
         self.grupo3=[]
@@ -149,29 +144,41 @@ class determinar_carta:
     def num_lanzamientos(self):
         if int(self.cartas) ==3:
             self.repeticion=1
-            print("se realizara "+str(self.repeticion)+" lanzamientos ")
+            print("************se realizara "+str(self.repeticion)+" lanzamientos************ ")
         elif int(self.cartas) >3  and int(self.cartas) <=9:
             self.repeticion=2
-            print("se realizara "+str(self.repeticion)+" lanzamientos ")
+            print("************se realizara "+str(self.repeticion)+" lanzamientos************ ")
         elif int(self.cartas) >9  and int(self.cartas) <=27:
             self.repeticion=3
-            print("se realizara "+str(self.repeticion)+" lanzamientos ")
+            print("************se realizara "+str(self.repeticion)+" lanzamiento************s ")
         elif int(self.cartas) >27  and int(self.cartas) <=81:
             self.repeticion=4
-            print("se realizara "+str(self.repeticion)+" lanzamientos ")
+            print("************se realizara "+str(self.repeticion)+" lanzamientos************ ")
 
     def lanzamiento_final(self):
         print("###############    Lanzamiento   ###################")
-        x=input("¿en que grupo esta su carta?")
+        x=input("¿en que grupo esta su carta?: ")
         if int(x) == 1:
             self.lista=self.grupo2+self.grupo1+self.grupo3
-            print(self.lista)
+            #print(self.lista)
         if int(x) == 2:
             self.lista=self.grupo1+self.grupo2+self.grupo3
-            print(self.lista)
+            #print(self.lista)
         if int(x) == 3:
             self.lista=self.grupo2+self.grupo3+self.grupo1
-            print(self.lista)
+            #print(self.lista)
+
+
+
+    
+
+
+    
+
+    
+
+
+    
 
 
     
